@@ -1,0 +1,7 @@
+*/*.o
+*/*.ko
+*/*.mod.*
+modkernel/.*
+modkernel/Module.symvers
+modkernel/modules.order
+.azk
