@@ -20,10 +20,10 @@ dmesg | tail
 
 # References
 
-http://kukuruku.co/hub/nix/writing-a-file-system-in-linux-kernel
-http://lxr.free-electrons.com/source/fs/ramfs/
-https://github.com/krinkinmu/aufs
-https://github.com/psankar/simplefs
+- http://kukuruku.co/hub/nix/writing-a-file-system-in-linux-kernel
+- http://lxr.free-electrons.com/source/fs/ramfs/
+- https://github.com/krinkinmu/aufs
+- https://github.com/psankar/simplefs
 
 ## License
 
