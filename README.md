@@ -14,7 +14,7 @@ Load and test:
 azk shell
 insmod ./azkfs.ko
 lsmod | grep azkfs
-sudo rmmod azkfs
+rmmod azkfs
 dmesg | tail
 ```
 
