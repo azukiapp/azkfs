@@ -24,6 +24,8 @@ dmesg | tail
 - http://lxr.free-electrons.com/source/fs/ramfs/
 - https://github.com/krinkinmu/aufs
 - https://github.com/psankar/simplefs
+- http://www.tldp.org/LDP/tlk/fs/filesystem.html
+- http://www.cyberciti.biz/tips/understanding-unixlinux-file-system-part-i.html
 
 ## License
 
