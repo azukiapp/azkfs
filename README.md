@@ -12,9 +12,23 @@ Load and test:
 
 ```shell
 azk shell
+
+# Loading module
 insmod ./azkfs.ko
 lsmod | grep azkfs
+
+# Mounting an image to a directory using azkfs
+touch test_image
+mkdir test_dir
+mount -o loop -t azkfs ./test_image ./test_dir
+
+# Umounting that dir
+umount ./test_dir
+
+# Unloading module
 rmmod azkfs
+
+# Inspecting logs
 dmesg | tail
 ```
 
@@ -26,6 +40,7 @@ dmesg | tail
 - https://github.com/psankar/simplefs
 - http://www.tldp.org/LDP/tlk/fs/filesystem.html
 - http://www.cyberciti.biz/tips/understanding-unixlinux-file-system-part-i.html
+- http://teaching.idallen.com/cst8207/13w/notes/450_file_system.html
 
 ## License
 
