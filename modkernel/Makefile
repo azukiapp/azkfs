@@ -1,7 +1,7 @@
 obj-m := azkfs.o
-azkfs-objs := super.o
+azkfs-objs := mount.o
 
-CFLAGS_super.o := -DDEBUG
+CFLAGS_mount.o := -DDEBUG
 
 all:
 	make -C /linux-kernel M=$(PWD) modules
