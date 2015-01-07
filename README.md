@@ -18,6 +18,7 @@ insmod ./azkfs.ko
 lsmod | grep azkfs
 
 # Mounting an image to a directory using azkfs
+cd /tmp
 touch test_image
 mkdir test_dir
 mount -o loop -t azkfs ./test_image ./test_dir
