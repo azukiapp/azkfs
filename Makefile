@@ -1,3 +1,5 @@
+TEST_FILES := $(shell find test -name '*.bats' | xargs)
+
 build:
 	@echo "Building azkfs kernel module..."
 	make -C modkernel
