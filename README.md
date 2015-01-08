@@ -4,7 +4,6 @@ Build module:
 
 ```shell
 azk shell
-cd modkernel
 make
 ```
 
