@@ -143,12 +143,21 @@ static int __init azkfs_init(void) {
   return 0;
 }
 
-static void __exit azkfs_fini(void) {
-    pr_debug("azkfs module unloaded\n");
+static void __exit azkfs_exit(void)
+{
+  int ret;
+
+  ret = unregister_filesystem(&azkfs_type);
+
+  if (likely(ret == 0))
+    printk(KERN_INFO "Sucessfully unregistered azkfs\n");
+  else
+    printk(KERN_ERR "Failed to unregister azkfs. Error:[%d]",
+           ret);
 }
 
 module_init(azkfs_init);
-module_exit(azkfs_fini);
+module_exit(azkfs_exit);
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("kmu");
