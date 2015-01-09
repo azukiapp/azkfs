@@ -1,5 +1,6 @@
-obj-m := azkfs.o
-azkfs-objs := mount.o
+MODULE_NAME := azkfs
+obj-m := ${MODULE_NAME}.o
+${MODULE_NAME}-objs := mount.o
 
 CFLAGS_mount.o := -DDEBUG
 
