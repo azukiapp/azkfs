@@ -13,7 +13,7 @@ clean:
 
 test: modkernel/${MODULE_NAME_TEST}.ko
 	@echo "Running azkfs tests..."
-	@bash ./deps/bats/bin/bats ${TEST_FILES}
+	@MODULE_NAME=$(MODULE_NAME_TEST) ./deps/bats/bin/bats ${TEST_FILES}
 
 modkernel/${MODULE_NAME_TEST}.ko: build_test modkernel
 
