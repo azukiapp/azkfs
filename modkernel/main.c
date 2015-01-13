@@ -10,6 +10,7 @@
 
 static struct file_system_type azkfs_type = {
   .owner = THIS_MODULE,
+   // TODO: use module name here to avoid conflict on test environment
   .name = "azkfs",
   .mount = azkfs_mount,
   .kill_sb = kill_block_super,
