@@ -12,5 +12,11 @@ static struct file_operations azkfs_file_operations = {
   // .write = azkfs_write,
 };
 
+int azkfs_iterate(struct file *filp, struct dir_context *ctx);
+
+static struct file_operations azkfs_dir_operations = {
+  .owner = THIS_MODULE,
+  .iterate = azkfs_iterate,
+};
 
 #endif /* not defined FILE_H */

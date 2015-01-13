@@ -6,6 +6,7 @@
 
 #include "mount.h"
 #include "inode.h"
+#include "file.h"
 
 void azkfs_put_super(struct super_block *sb)
 {
@@ -29,6 +30,7 @@ int azkfs_fill_sb(struct super_block *sb, void *data, int silent)
   root->i_ino = 0;
   root->i_sb = sb;
   root->i_op = &azkfs_inode_ops;
+  root->i_fop = &azkfs_dir_operations;
   root->i_atime = root->i_mtime = root->i_ctime = CURRENT_TIME;
   inode_init_owner(root, NULL, S_IFDIR);
 
